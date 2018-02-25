@@ -1,0 +1,39 @@
+#Ahmad Osman
+
+1-Imperative model, Function model, and Logic Model.
+
+2-Imperative model; Java.
+  Functional model: Lisp.
+  Logic model: Prolog.
+
+3-Imperative model: John von Neumann.
+  Functional. model: Alonzo Church.
+  Logic model: Alain Colmerauer, Philippe Roussel, and Robert Kowalski.
+
+4-Imperative model: getting data as input, transforming it via updates to the memory, and then producing output based on this imperatively changed date.
+  Functional model: a function is data like any other data element. Integers and functions are both treated the same in the functional model.
+  Logic model: the programmer provides a database of facts or rules and with this database a single program tries to answer questions with a yes or no answers.
+
+5-Java: James Gosling.
+  C++: Bjarne Stroustrup.
+  Python: Guido van Rossum.
+  Standard ML: Robin Milner.
+  Prolog: Alain Colmerauer, Philippe Roussel, and Robert Kowalski.
+
+7-Ruby and Go programming languages.
+
+8-Curry, Fril, Janus, and ROOP programming languages.
+
+9-The output of a compiled program is an executable file that runs at a much lesser amount of time than the time it takes to compile. This is because the parsing of the code happens one time only in order for a ready-to-use executable file to be created, unlike what happens with interpreting a program.
+
+10-Interpreting a program allows for portability since the code can be simply run on any device. This is because an interpreting program does not depend on what architecture/OS is being used, which is more advantageous than compiling a program.
+
+11-Programs' execution speed on a virtual machine language is faster than that of an interpreted language. Also, VM Languages allow for backward compatibility and the code does not have to be in exposure(public) in order for it to run.
+
+12-A bytecode program is a program where a set of low-level instructions can be executed by a virtual macihne. .NET Languages and Java use bytecode in their implementation.
+
+13-Types are important as they give rules to what operations can be done on data, also they allow or disallow for specific operations between different data types during data transformations. Types allow for classification of data into categories and protect the autonomy of these data types.
+
+14-Dynamically typed programming languages do not proceed to type checking before run-time execution. In other words, the operations specified on different data types do not get checked until the program is executing and is on that specific instruction of operation.
+
+15-Statically typed programming languages proceed to do type checking when the program is being written and shows incompaitability of operations between data types before the execution of the program.

@@ -1,0 +1,21 @@
+Function: main/0
+Constants: 0, "Please enter an integer: ", 1, 2
+Globals: print, list, range, int, input
+BEGIN
+          LOAD_GLOBAL                    0
+          LOAD_GLOBAL                    1
+          LOAD_GLOBAL                    2
+          LOAD_CONST                     0
+          LOAD_GLOBAL                    3
+          LOAD_GLOBAL                    4
+          LOAD_CONST                     1
+          CALL_FUNCTION                  1
+          CALL_FUNCTION                  1
+          LOAD_CONST                     2
+          BINARY_ADD               
+          LOAD_CONST                     3
+          CALL_FUNCTION                  3
+          CALL_FUNCTION                  1
+          CALL_FUNCTION                  1
+          RETURN_VALUE             
+END
