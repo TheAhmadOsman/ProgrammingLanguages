@@ -1,0 +1,217 @@
+#Ahmad M. Osman
+
+1-JCoCo, unlike Python, does not support importing modules and requires a main function in order for JCoCo's assembled program to begin executing. JCoCo does not store instructions in bytecode format but rather uses labels in the assembly language format. JCoCo uses a python virtual machine assembly language instead of directly producing bytecode files.
+
+2-A disassembler takes in a machine language program and gives out an assembly language copy of that program.
+
+3-An assembler takes in an assembly language program and gives out a machine language copy of that program.
+
+4-A stack frame represents the stored data of a function call during the program's execution. Besides that, each stack frame has local variables, a block stack and an operand stack, and a program counter. Also, stack frames get stored in the run-time stack. 
+
+5-The block stack is part of the stack frame and it is responsible of keeping track of the exit points for each block of the code within a certain function in a JCoCo program.
+
+6-A program counter is part of the stack frame and it is responsible of holding the address of the following instruction to be executed.
+
+7-The BUILD_LIST instruction is the instruction in JCoCo responsible for creating lists. BUILD_LIST works by adding the items of the list to the operands stack in the specified order and then the BUILD_LIST gets called with list's length as an argument, and after that the BUILD_LIST instruction starts popping elements of the specified list length from the operand stack and then return a list object.
+
+8-Once an assignment is created, STORE_FAST takes the value and stores it in the local list of the program. LOAD_FAST gets the value pushed on the operand stack by trying to access it from the local list of the program.
+
+9-By using the built-in function "input".
+
+10-JCoCo's assembled code contains labels which make it easier to understand and to follow the instructions of. For example, "POP_JUMP_IF_FALSE label00" makes it easier to understand and follow the next instruction in case the condition is being met. Besides that, there is no BEGIN and END in Python disassembled programs, and it is easy to follow JCoCo's formatted output.
+
+    Python disassembled program output: 
+        4     0 LOAD_GLOBAL              0 (print) 
+              3 LOAD_CONST               1 ('Hello World!') 
+              6 CALL_FUNCTION            1 
+              9 POP_TOP              
+             10 LOAD_CONST               0 (None) 
+             13 RETURN_VALUE         
+
+    JCoCo's assembled program:
+        Function: main/0
+        Constants: None, "Hello World!"
+        Globals: print
+        BEGIN
+                LOAD_GLOBAL                    0
+                LOAD_CONST                     1
+                CALL_FUNCTION                  1
+                POP_TOP                  
+                LOAD_CONST                     0
+                RETURN_VALUE             
+        END
+
+11-The last instruction of the loop is JUMP_ABSOLUTE and its purpose is to check whether there is another iteration or not.
+
+12-JCoCo's implementation uses the block stack in both cases to know what is the following instruction.
+
+13-Lazy evaluation is when a sequence generates the next value of just before it is used. Lazy evaluation helps in preventing any unnecessary usage of storage and helps in reducing the time complexity as it evaluates the next value only when the program needs it to. 
+
+14-A closure is an environment that contains a defined function along its code. A closure allows for function portability where variables defined within the function are part of that function when a function outside the scope where the variable is defined gets called. Closures are essential to set up the function environment when making function calls.
+
+15-In JCoCo, calling a class creates an instance of it, the class objects gets loaded by LOAD_GLOBAL and an instance of a class objects gets created by CALL_FUNCTION then. LOAD_BUILD_CLASS instruction can be used for creating dynamic classes.
+
+16-
+Function: main/0
+    Function: Student/1
+        Function: __init__/5
+        Constants: None
+        Locals: self, first_name_, second_name_, id_, advisor_
+        Globals: _first_name, _second_name, _id, _advisor
+        BEGIN
+                  LOAD_FAST                      1
+                  LOAD_FAST                      0
+                  STORE_ATTR                     0
+                  LOAD_FAST                      2
+                  LOAD_FAST                      0
+                  STORE_ATTR                     1
+                  LOAD_FAST                      3
+                  LOAD_FAST                      0
+                  STORE_ATTR                     2
+                  LOAD_FAST                      4
+                  LOAD_FAST                      0
+                  STORE_ATTR                     3
+                  LOAD_CONST                     0
+                  RETURN_VALUE             
+        END
+        Function: first_name/1
+        Constants: None
+        Locals: self
+        Globals: _first_name
+        BEGIN
+                  LOAD_FAST                      0
+                  LOAD_ATTR                      0
+                  RETURN_VALUE             
+        END
+        Function: second_name/1
+        Constants: None
+        Locals: self
+        Globals: _second_name
+        BEGIN
+                  LOAD_FAST                      0
+                  LOAD_ATTR                      0
+                  RETURN_VALUE             
+        END
+        Function: id/1
+        Constants: None
+        Locals: self
+        Globals: _id
+        BEGIN
+                  LOAD_FAST                      0
+                  LOAD_ATTR                      0
+                  RETURN_VALUE             
+        END
+        Function: advisor/1
+        Constants: None
+        Locals: self
+        Globals: _advisor
+        BEGIN
+                  LOAD_FAST                      0
+                  LOAD_ATTR                      0
+                  RETURN_VALUE             
+        END
+        Function: __str__/1
+        Constants: None, "id number", "advisor"
+        Locals: self
+        Globals: str, _first_name, _second_name, _id, _advisor
+        BEGIN
+                  LOAD_GLOBAL                    0
+                  LOAD_FAST                      0
+                  LOAD_ATTR                      1
+                  LOAD_FAST                      0
+                  LOAD_ATTR                      2
+                  LOAD_CONST                     1
+                  LOAD_FAST                      0
+                  LOAD_ATTR                      3
+                  LOAD_CONST                     2
+                  LOAD_FAST                      0
+                  LOAD_ATTR                      4
+                  CALL_FUNCTION                  6
+                  RETURN_VALUE             
+        END
+    Constants: code(__init__), code(first_name), code(second_name), code(id), code(advisor), code(__str__), None
+    Locals: __locals__
+    Globals: __name__, __module__, __init__, first_name, second_name, id, advisor, __str__
+    BEGIN
+              LOAD_FAST                      0
+              STORE_LOCALS             
+              LOAD_NAME                      0
+              STORE_NAME                     1
+              LOAD_CONST                     0
+              MAKE_FUNCTION                  0
+              STORE_NAME                     2
+              LOAD_CONST                     1
+              MAKE_FUNCTION                  0
+              STORE_NAME                     3
+              LOAD_CONST                     2
+              MAKE_FUNCTION                  0
+              STORE_NAME                     4
+              LOAD_CONST                     3
+              MAKE_FUNCTION                  0
+              STORE_NAME                     5
+              LOAD_CONST                     4
+              MAKE_FUNCTION                  0
+              STORE_NAME                     6
+              LOAD_CONST                     5
+              MAKE_FUNCTION                  0
+              STORE_NAME                     7
+              LOAD_CONST                     6
+              RETURN_VALUE             
+    END
+Constants: None, code(Student), "Student", "Ahmad", "Osman", 498102, "Dr. Kent Lee", "Mike", "Nathan", 357964, "Dr. Phil"
+Locals: Student, s, s2
+Globals: print, first_name, second_name, id, advisor
+BEGIN
+          LOAD_BUILD_CLASS         
+          LOAD_CONST                     1
+          MAKE_FUNCTION                  0
+          LOAD_CONST                     2
+          CALL_FUNCTION                  2
+          STORE_FAST                     0
+          LOAD_FAST                      0
+          LOAD_CONST                     3
+          LOAD_CONST                     4
+          LOAD_CONST                     5
+          LOAD_CONST                     6
+          CALL_FUNCTION                  4
+          STORE_FAST                     1
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      1
+          LOAD_ATTR                      1
+          CALL_FUNCTION                  0
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      1
+          LOAD_ATTR                      2
+          CALL_FUNCTION                  0
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      1
+          LOAD_ATTR                      3
+          CALL_FUNCTION                  0
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      1
+          LOAD_ATTR                      4
+          CALL_FUNCTION                  0
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_FAST                      0
+          LOAD_CONST                     7
+          LOAD_CONST                     8
+          LOAD_CONST                     9
+          LOAD_CONST                    10
+          CALL_FUNCTION                  4
+          STORE_FAST                     2
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      2
+          LOAD_ATTR                      3
+          CALL_FUNCTION                  0
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_CONST                     0
+          RETURN_VALUE             
+END

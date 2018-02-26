@@ -1,4 +1,4 @@
-#Ahmad Osman
+#Ahmad M. Osman
 
 1-Imperative model, Function model, and Logic Model.
 

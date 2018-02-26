@@ -1,0 +1,29 @@
+#Ahmad M. Osman
+
+1-Syntax is a structure of words and symbols that belong to a certain language, it is simply how a program look like. Semantics are the rules that the words and symbols of a certain language follow in order for the created program to be meaningful and act in specific ways.
+
+2-A token is a symbol of a language. This symbol can be whatever the language is supposed to support, such as numbers, operators, keywords, types, etc...
+
+3-A nonterminal can be a string of tokens, a number of expressions, or a set of phrases; which can expressed through the symbols in the language, both the terminal and nonterminal ones.
+
+4-BNF is a shortcut for Backus Naur Form. BNF is a way to describe the syntax of a language, clearly and without ambiguity, in the form of a formal metalanguage.
+
+5-A top-down parser constructs a left-most derivation.
+
+6-A recursive descent parser.
+
+7-                              *
+                        3         +
+                                    4       5
+
+8-The prefix expression is: * 3 + 4 5. The abstract syntax tree is the same as the one shown in answer to question number 7.
+
+9-A lexical generator, or Lex, is where tokens get generated from the characters of a source code file. However, yacc, a parser generator, builds a parser of a given language with a grammar by constructing the pushdown automaton and the lookahead sets required to parse the programs written using the grammar of this language.
+
+10-Top-down parsing uses the next token in the source file to decide how to parse it, and with that in mind, using a top-down parser for left recursive grammar is going to be a very complex process. Besides that, for a top-down parser to handle ambiguous grammar, the time taken for that process might be exponential due to trying all the possible alternatives in the grammar to construct a useful parse tree.
+
+11-To implement a bottom-up parser, a finite state machine with a stack are required.
+
+12-The context-sensitive issue occurs when a context-sensitive grammar cannot be specified using context-free grammar, such as type compatibility, identifiers, and declarations. The context-sensitive issue can be seen in Java where the return value of a method must be the same as the one the method was declared with. 
+
+13-In bottom-up parsing, the terms shift and reduce are the two factors that help parsing the input symbols and building a parse tree. The shift operation adds the next input symbol to the stack, and the reduce operation makes a reduction on a set of grammar symbols that are on top of the stack with the production rules of the grammar.
