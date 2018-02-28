@@ -1,0 +1,165 @@
+Function: gcd/2
+Constants: None, 0
+Locals: x, y
+Globals: gcd
+BEGIN
+          LOAD_FAST                      0
+          LOAD_CONST                     1
+          COMPARE_OP                     2
+          POP_JUMP_IF_FALSE        label00
+          LOAD_FAST                      1
+          RETURN_VALUE             
+label00:  LOAD_GLOBAL                    0
+          LOAD_FAST                      1
+          LOAD_FAST                      0
+          BINARY_MODULO            
+          LOAD_FAST                      0
+          CALL_FUNCTION                  2
+          RETURN_VALUE             
+END
+Class: Rational
+BEGIN
+    Function: __mul__/2
+    Constants: None
+    Locals: self, other
+    Globals: Rational, getNumerator, getDenominator
+    BEGIN
+              LOAD_GLOBAL                    0
+              LOAD_FAST                      0
+              LOAD_ATTR                      1
+              CALL_FUNCTION                  0
+              LOAD_FAST                      1
+              LOAD_ATTR                      1
+              CALL_FUNCTION                  0
+              BINARY_MULTIPLY          
+              LOAD_FAST                      0
+              LOAD_ATTR                      2
+              CALL_FUNCTION                  0
+              LOAD_FAST                      1
+              LOAD_ATTR                      2
+              CALL_FUNCTION                  0
+              BINARY_MULTIPLY          
+              CALL_FUNCTION                  2
+              RETURN_VALUE             
+    END
+    Function: getDenominator/1
+    Constants: None
+    Locals: self
+    Globals: denominator
+    BEGIN
+              LOAD_FAST                      0
+              LOAD_ATTR                      0
+              RETURN_VALUE             
+    END
+    Function: __add__/2
+    Constants: None
+    Locals: self, other
+    Globals: Rational, getNumerator, getDenominator
+    BEGIN
+              LOAD_GLOBAL                    0
+              LOAD_FAST                      0
+              LOAD_ATTR                      1
+              CALL_FUNCTION                  0
+              LOAD_FAST                      1
+              LOAD_ATTR                      2
+              CALL_FUNCTION                  0
+              BINARY_MULTIPLY          
+              LOAD_FAST                      1
+              LOAD_ATTR                      1
+              CALL_FUNCTION                  0
+              LOAD_FAST                      0
+              LOAD_ATTR                      2
+              CALL_FUNCTION                  0
+              BINARY_MULTIPLY          
+              BINARY_ADD               
+              LOAD_FAST                      0
+              LOAD_ATTR                      2
+              CALL_FUNCTION                  0
+              LOAD_FAST                      1
+              LOAD_ATTR                      2
+              CALL_FUNCTION                  0
+              BINARY_MULTIPLY          
+              CALL_FUNCTION                  2
+              RETURN_VALUE             
+    END
+    Function: __str__/1
+    Constants: None, "/"
+    Locals: self
+    Globals: str, numerator, denominator
+    BEGIN
+              LOAD_GLOBAL                    0
+              LOAD_FAST                      0
+              LOAD_ATTR                      1
+              CALL_FUNCTION                  1
+              LOAD_CONST                     1
+              BINARY_ADD               
+              LOAD_GLOBAL                    0
+              LOAD_FAST                      0
+              LOAD_ATTR                      2
+              CALL_FUNCTION                  1
+              BINARY_ADD               
+              RETURN_VALUE             
+    END
+    Function: getNumerator/1
+    Constants: None
+    Locals: self
+    Globals: numerator
+    BEGIN
+              LOAD_FAST                      0
+              LOAD_ATTR                      0
+              RETURN_VALUE             
+    END
+    Function: __init__/3
+    Constants: None
+    Locals: self, numerator, denominator
+    Globals: gcd, numerator, denominator
+    BEGIN
+              LOAD_FAST                      1
+              LOAD_GLOBAL                    0
+              LOAD_FAST                      1
+              LOAD_FAST                      2
+              CALL_FUNCTION                  2
+              BINARY_FLOOR_DIVIDE      
+              LOAD_FAST                      0
+              STORE_ATTR                     1
+              LOAD_FAST                      2
+              LOAD_GLOBAL                    0
+              LOAD_FAST                      1
+              LOAD_FAST                      2
+              CALL_FUNCTION                  2
+              BINARY_FLOOR_DIVIDE      
+              LOAD_FAST                      0
+              STORE_ATTR                     2
+              LOAD_CONST                     0
+              RETURN_VALUE             
+    END
+END
+Function: main/0
+Constants: None, 1, 2, 3
+Globals: print, Rational
+BEGIN
+          LOAD_GLOBAL                    0
+          LOAD_GLOBAL                    1
+          LOAD_CONST                     1
+          LOAD_CONST                     2
+          CALL_FUNCTION                  2
+          LOAD_GLOBAL                    1
+          LOAD_CONST                     2
+          LOAD_CONST                     3
+          CALL_FUNCTION                  2
+          BINARY_ADD               
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    0
+          LOAD_GLOBAL                    1
+          LOAD_CONST                     1
+          LOAD_CONST                     2
+          CALL_FUNCTION                  2
+          LOAD_GLOBAL                    1
+          LOAD_CONST                     2
+          LOAD_CONST                     3
+          CALL_FUNCTION                  2
+          BINARY_MULTIPLY          
+          CALL_FUNCTION                  1
+          RETURN_VALUE             
+END
