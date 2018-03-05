@@ -1,0 +1,21 @@
+Ahmad M. Osman
+
+11-Java.
+
+12-Garbage collection helps in freeing up space(in the heap) of no longer needed objects that were created dynamically, in order to be able to use this space for creating other objects later.
+
+13-Garbage collection can impact the run-time performance of a system. Garbage collection disallows the usage of pointers in order to be able to safely free unused memory, therefore forcing the programming languages, like Java, to have less access to the details of the underlying hardware.
+
+14-A destructor is a member function that gets called when the life time of an object ends. It is needed to delete that object and free up the memory used by it.
+
+15-The keyword virtual.
+
+16-It is needed to customize the behavior of code we have already written.
+
+17-It is needed to allow us re-use code in sofrware we are currently writing.
+
+18-Classes in Java are similar to classes in C++, where they define abstract datatype and methods. An interface in Java is more of a contract to implement all the methods in this interface if being "implemented" by a specific class. Both classes and interfaces have methods. Interfaces, unlike classes, do not have member variables.
+
+19-An adapter class comes with a default implementation of all the methods for an event listener interace. They are useful when only a few events are handled by a particular event listener interface. This can be seen as time saving too.
+
+20-It means that a function can be treated as values by encoding the functions as objects. Since in Java a class can simulate a function or a method, callbacks are usually implemented in Java by defining an interface with a method __call__ that takes in references and returns objects.
