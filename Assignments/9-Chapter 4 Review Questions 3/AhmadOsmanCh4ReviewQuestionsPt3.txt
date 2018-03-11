@@ -1,0 +1,25 @@
+Ahmad M. Osman
+
+21-A generic class is usually a container of some type. Generics let programmers re-use classes, especially classes that are designed as data structures.
+
+22-A template is how C++ programmers write Generic classes. "vector<int> intVec;" is how a vector is declared in C++.
+
+23-It is Java's ability to determine when to box or unbox primitive values based on the type of value and method being called.
+
+24-By having classes simulating methods or functions.
+
+25-Anonymous Classes or Anonymous Inner Classes are very important in Java. The reason behind their importance is that Anonymous Inner Classes provide means to implement call-backs.
+
+26-For type(6), on both JCoCo and Python, the answer will be <class 'int'>, however, from that point on, type(type(6)) and beyond that will result in <class 'type'>. Since the inner type gets evaluated first, no matter how many outer type calls, made, the result will still be <class 'type'>.
+
+27-The finite state machine consists of states and transitions between states depending on the characters read from the input file. The finite state machine accepts tokens of the CASM file. When the parser is constructed, it first creates a scanner to read the tokens of the CASM program, the PyScanner's get Token method is written as a finite state machine to get the tokens of the CASM program.
+
+28-Top-Down.
+
+29-PyCode objects are not callable, and to be called, we need both the code and the environment in which to execute the code. The PyFunction constructor builds this environment for us.
+
+30-Traceback is the ability to to trace down the call chain to the point where an exception was raised. It is important for exceptions.
+
+31-The PyMethod class is a wrapper class for PyFunction. A PyFunction of a class is passed on to any instance of that class as a PyMethod.
+
+32-Java provides built-in support for hashing items. The Object class of Java includes a method called hashCode that is used to get a hash value for any hashable Java value. However, since JCoCo likes to call __hash__ magic method, the PyObjectAdapter class allows JCoCo to define the hashCode method to call the __hash__ magic method.
