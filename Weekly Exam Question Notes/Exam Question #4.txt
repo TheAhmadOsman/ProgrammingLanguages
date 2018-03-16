@@ -1,0 +1,13 @@
+A test question with some Java code on it from the JCoCo project. I will ask you to identify parts of a Java program including the following:
+    A subclass
+    A superclass
+    An inner class
+    A type cast
+    An instance variable
+    A method
+    A return type
+    A generic class
+    Object instantiation
+    A constructor
+    An anonymous class
+    An example of auto-boxing or unboxing.
