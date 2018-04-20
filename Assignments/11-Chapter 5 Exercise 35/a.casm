@@ -1,0 +1,20 @@
+Function: main/0
+Constants: None, "The answer is", 5, 4
+Locals: memory
+Globals: print, input, float
+BEGIN
+    LOAD_GLOBAL         0
+    LOAD_CONST          2
+    LOAD_CONST          2
+    STORE_FAST          0
+    LOAD_FAST           0
+    LOAD_CONST          3
+    LOAD_FAST           0
+    BINARY_MULTIPLY     
+    BINARY_ADD          
+    CALL_FUNCTION       2
+    RETURN_VALUE
+END
+
+; You need one more instuction at the end to load print  - already did it in clase
+; Remove tabs and make one space only!

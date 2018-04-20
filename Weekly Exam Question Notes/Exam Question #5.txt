@@ -1,0 +1,1 @@
+Test question on Friday based on the SML exercises. Write a function or two from that homework? Will not ask for find.

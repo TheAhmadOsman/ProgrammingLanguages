@@ -1,0 +1,43 @@
++, -, *, /, ~, S, r
+
+- + S 6 5  * ~1 R 
+
+                    -
+            +               *
+        S       5       ~       R
+    6               1
+
+fun codegen(add'(e1, e2), out)=
+
+Function main/0:
+Constants -1, 0, 6, 5,1
+Locals: memory
+Globals: print, input, int
+
+BEGIN
+    LOAD_GLOBAL 0 ; For the first four
+    LOAD_CONST 2
+    DUP_TOP 
+    STORE_FAST 0
+    LOAD_CONST 3
+    BINARY_ADD
+    LOAD_CONST 1 ;For negate
+    LOAD_CONST 4
+    BINARY_SUBTRACT
+    LOAD_FAST -
+    BINARY_MULTIPLY
+    BINARY_SUBTRACT
+    CALL_FUNCTION 1
+    RETURN_VALUE
+
+    ; pictures of this.
+
+    ;the following for the input 
+
+    LOAD_GLOBAL int index
+    LOAD_GLOBAL input
+    LOAD_CONST prompt
+    CALL_FUNCTION i
+    CALL_FUNCTION i
+
+    ; There is another example with input
