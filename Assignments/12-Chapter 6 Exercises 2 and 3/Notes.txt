@@ -1,0 +1,38 @@
+You need to know about comparison-operators for exercise number_2 -> Page 46
+
+You can start part 2 by writing a test program.
+
+mlcomp.sml is where a good portion of the code will go into
+mlcomp.lex is gonna have some changes
+mlcomp.grm is gonna have some changes too
+
+there is a less than, grep that 
+
+Test program following...
+content of testcomp.sml:
+    ( println 1 < 2
+    )
+
+run mlcomp testcomp.sml, will run.
+
+while 
+    ( println 1 < 2
+      println 1 <= 2
+    )
+
+will give you an error for expression <=
+
+grep "Attempt to compile expression" *
+
+then we go look for the results, and start editing.
+
+We need to do less than or equal, greater than or equal, and not equal.
+
+fun rotate2(n, lst) = 
+    let fun helprot(0, lst, acc) = lst @ (List.rev acc)
+    | helprot(n, [], acc) = helprot(n, lst, [])
+    | helprot(n, h::t, acc) = helprot(n-1, t, h::acc)
+        n mod (length, lst)
+    in
+        helprot(n, lst, [])
+    end
