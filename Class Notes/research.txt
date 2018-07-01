@@ -1,2 +1,3 @@
-adapters
-Anonymous inner class
+Java
+    Adapters
+    Anonymous inner class

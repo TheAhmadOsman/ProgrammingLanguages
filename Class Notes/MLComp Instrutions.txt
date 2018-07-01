@@ -1,0 +1,9 @@
+we're interested in mlcomp.grm, mlcomp.lex, mlcomp.sml,  and any sml file that does not start with test.
+
+make in the project directory to build the compiler
+
+mlcomp the test file to generate a casm file tht can be then used with coco.
+
+So far we've worked with mlcom.lex, mlcomp.rgm, mlast.sm
+
+add negate for the matchexhausting

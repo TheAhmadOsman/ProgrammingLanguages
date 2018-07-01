@@ -1,0 +1,44 @@
+filter: fn (a -> bool) -> a list -> a list
+
+from SML enter List.filter
+    val it = fn : ('a -> bool) -> 'a list -> 'a list
+
+filter: fn ((a -> bool) -> a list) -> a list
+            each arrow is a function
+    
+    translate to types of --> AST Description Fig. 8.7
+        fn(fn(fn(typevar("a"), bool), listOf(typevar("a"))), listOf(typevar("a")))
+
+This is how filter looks like in prolog
+
+filter (fn x => mod 2 = 0) [0,1,2,3,4,5] = [0,2,4] : int list
+
+What is the type in this expresion? (before the equal sign)
+
+Pictures
+
+Exercise 9:
+from mlcomp
+    let val L as h::t = [1,2,3]
+    in
+        L;
+        print h;
+        print t;
+    end;
+
+from sml
+    let val L as T = 6;
+    in
+        L;
+        T
+    end;
+
+    ---
+    this is not correct:
+    
+    let val h::t as L = [1,2,3]
+    in
+        L
+    end;
+
+    this will cause Error: pattern to left of AS must be variable

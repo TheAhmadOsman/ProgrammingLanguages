@@ -1,0 +1,23 @@
+HW:
+    Exercise 12, page 300:
+        Prolog does not recognize tuples, you have to write the word pair in-front of it.
+
+    Ex 14:
+        Think too hard, do not try to program. Think of what it mean for the list to be 3 copies of itself. Then describe that relationship.
+
+-------------------
+
+Exam Question #7:
+
+    the nil should be = init in foldr function
+        
+    fun reverse L = foldr (fn(x,y) => y@[x]) [] L
+
+    (1,(2,(3,(4, [])))) => ((([]@[4])@[3])@[2])@[i]
+
+Todays HW answer from mlcomp test20.sml: val[(x,y,z)] : (str * int * bool) list
+and typechecker passed.
+
+------------------
+
+Code generation and type inference for the final project

@@ -1,0 +1,52 @@
+echo $PATH
+
+we need to have the locations of coco added to $PATH
+
+./coco is basically a file with a path to JCoCo.jar
+
+#!/bin/bash
+java -jar ~/Dropbox/bin/JCoCo.jar $*
+
+-----
+
+New assignment due to Friday besides what is due on Wednesday. Read about CASE.
+
+Exercise 7 and will require pattern matching. Considered next week's exam question.
+
+-----
+
+To have 2 "x" variables in SML:
+
+    let val x = 6
+    in  let val x = 5
+    in
+        x
+    end
+    + x
+end
+
+-------
+
+append in SML
+
+    fun append(nil, T) = T 
+        | append (h::t, L) = h::(append, t, L))
+
+append in prolog
+
+file test.pro
+    append([], L, L).
+    append((H|T), L, [H|L2]):- append(T,L,L2).
+
+swpil
+consult('test.pro').
+
+append([1,2],[3,4],[1,2,3,4])
+    should say true.
+
+append([1,2],[3,4],L)
+
+append(L, [3,4], [1,2,3,4]).
+
+append(L, X, [1,2,3,4]).
+

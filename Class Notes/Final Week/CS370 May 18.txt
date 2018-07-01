@@ -1,0 +1,7 @@
+variables code generation is in chapter 6
+
+apply('!').id -> apply codegen on it.
+
+| codegen(apply(id("!", t2))) = codegen(t2) -> On the website
+
+http://knuth.luther.edu/~leekent/PL/usingsml.html#reference-variables
