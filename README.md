@@ -25,7 +25,7 @@ I took this class in Spring 2018. Each folder is its own project with the implem
   * Exam Questions Review
   * Tools
 
-## Implementation of JCoCo FrozenSet Class  [JCoCo](https://github.com/Ahmad-Magdy-Osman/JCoCo)
+## Implementation of [JCoCo](https://github.com/Ahmad-Magdy-Osman/JCoCo) FrozenSet Class
 
 [JCoCo](https://github.com/Ahmad-Magdy-Osman/JCoCo) is an implementation of the Python Virtual Machine in Java. JCoCo is an object-oriented implementation of the Python 3.5 virtual machine.
 
