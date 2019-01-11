@@ -3,4 +3,6 @@ __pycache__/
 .DS_Store
 .DS_Store?
 ._*
-Others
+others
+.vscode
+CS370.code-workspace
